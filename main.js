@@ -57,14 +57,13 @@ $(document).ready(function() {
   function dashThis(string){
 //We replace the all vowels and store them in dashed results. The consonants in dashed vowels
     var dashed_result = "";
+    var vowels = ["a", "e", "i", "o", "u"];
     for (var i = 0; i < string.length; i++) {
       var specific_character = string.charAt(i);
-      if (specific_character == "a"||
-          specific_character == "e"||
-          specific_character == "i"||
-          specific_character == "o"||
-          specific_character == "u"){
+      if (vowels.indexOf(specific_character)>-1){
           dashed_result += "_";
+          var number_of_vowels = dashed_result.length
+          console.log(number_of_vowels);
      }else {
       dashed_result += specific_character;
       }
@@ -77,10 +76,10 @@ $(document).ready(function() {
  var guessThis = $(".dash-this").text();
  console.log(guessThis);
  var blankString = dashThis(guessThis);
- console.log(blankString);
 
  $(".dash").click(function () {
     $(".dash-this").toggle()
     $(".this-dash").text(blankString).toggle();
+    console.log(blankString);
  })
 });
