@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+.bad-capital{
+  cursor: pointer;
+  color: #00ccff;
+}
+.bad-capital:hover{
+  text-decoration: underline;
+}
+.capital-correct{
+  display: none;
+}
